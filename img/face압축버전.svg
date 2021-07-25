@@ -1,1 +1,5 @@
-<svg data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 79"><circle cx="39.5" cy="39.5" r="34.5" stroke-width="10" fill="none" stroke="#000" stroke-miterlimit="10"/><path d="M45.5 52.5a8 8 0 11-16 0" stroke-width=".75" fill="none" stroke="#000" stroke-miterlimit="10"/><circle cx="27" cy="35" r="6"/><circle cx="51" cy="34" r="9"/></svg>
+<svg data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 79">
+    <circle cx="39.5" cy="39.5" r="34.5" stroke-width="10" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <path d="M45.5 52.5a8 8 0 11-16 0" stroke-width=".75" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <circle cx="27" cy="35" r="6"/><circle cx="51" cy="34" r="9"/>
+</svg>
