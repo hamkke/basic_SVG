@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>svg태그안에style태그넣기</title>
 </head>
 <body>
     <svg class="face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 74">
+                    <!--문자열이 아닌 XML 태그로 인식하여 오류가 발생
+                이런 경우 특수문자를 XML 태그가 아닌 문자열로 인식하게 하기 위해
+                CDATA를 사용, <style><![CDATA[...]]></style> 이런식으로 사용, script도 가능-->
         <style>
             .face {
                 position:absolute;
