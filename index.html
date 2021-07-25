@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+    <style>
+        body {
+            margin:0;
+        }
+        svg {
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+        <!--
+            viewBox를 설정하고 width, height 설정하지 않으면 반응형이 된다
+            <svg width="500" height="500">
+            viewBox, width, height(얘네는 css로)를 설정하면 viewBox에 적힌 값이 비율로 적용 된다
+            <svg width="500" height="500" viewBox="0 0 500 500">
+        -->
+        <svg viewBox="0 0 500 500">
+        <rect x="0" y="0" width="100" height="100"></rect>
+    </svg>
+
+    <!--기존 버전-->
+    <!-- <svg id="레이어_1" data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 79">
+        <defs>
+          <style>
+            .cls-1, .cls-2 {
+              fill: none;
+              stroke: #000;
+              stroke-miterlimit: 10;
+            }
+      
+            .cls-1 {
+              stroke-width: 10px;
+            }
+      
+            .cls-2 {
+              stroke-width: 0.75px;
+            }
+          </style>
+        </defs>
+        <title>face</title>
+        <circle class="cls-1" cx="39.5" cy="39.5" r="34.5"/>
+        <path class="cls-2" d="M52.5,66.5a8,8,0,1,1-16,0" transform="translate(-7 -14)"/>
+        <g>
+          <circle cx="27" cy="35" r="6"/>
+          <circle cx="51" cy="34" r="9"/>
+        </g>
+      </svg> -->
+
+    <!--압축 버전-->
+    <svg data-name="레이어 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 79 79"><circle cx="39.5" cy="39.5" r="34.5" stroke-width="10" fill="none" stroke="#000" stroke-miterlimit="10"/><path d="M45.5 52.5a8 8 0 11-16 0" stroke-width=".75" fill="none" stroke="#000" stroke-miterlimit="10"/><circle cx="27" cy="35" r="6"/><circle cx="51" cy="34" r="9"/></svg>
+</body>
+</html>
