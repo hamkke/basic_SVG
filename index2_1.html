@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <svg class="face" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 74">
+        <style>
+            .face {
+                position:absolute;
+                top:0;
+                right:0;
+                left:0;
+                bottom:0;
+                width:200px;
+                margin:auto;
+            }
+            .hair {
+                fill:chartreuse;
+            }
+            .hair:nth-of-type(1) {
+                fill:coral;
+            }
+            @keyframes eye-ani {
+                0% {transform:scale(0.9);}
+                100% {transform:scale(1.1);}
+            }
+            .eye {
+                /* transform-origin:center center; */
+                animation:eye-ani 0.8s infinite alternate;
+            }
+            .eye:nth-of-type(1) {
+                transform-origin:17px 37px;
+            }
+            .eye:nth-of-type(2) {
+                transform-origin:40px 38px;
+            }
+        </style>
+        <path d="M33 9A32 32 0 111 41 32 32 0 0133 9m0-1a33 33 0 1033 33A33 33 0 0033 8z"/>
+        <circle class="eye" cx="17" cy="37" r="5"/>
+        <circle class="eye" cx="40" cy="38" r="7"/>
+        <path d="M44 55.5a10.75 10.75 0 01-21.5 0" fill="none" stroke="#000" stroke-miterlimit="10"/>
+        <ellipse class="hair" cx="16" cy="14.5" rx="16" ry="6.5"/>
+        <ellipse class="hair" cx="35" cy="8.5" rx="12" ry="8.5"/>
+        <ellipse class="hair" cx="47.5" cy="18.5" rx="13.5" ry="10.5"/>
+        </svg>
+</body>
+</html>
