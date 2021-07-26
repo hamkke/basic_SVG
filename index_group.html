@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그룹만들기</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .shapes {
+            width:600px;
+            height:400px;
+            background:#ddd;
+        }
+        .group1 {
+            fill:yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes">
+        <g class="group1"> <!--g태그로 그룹만들기-->
+            <rect x="10" y="20" width="200" height="100"></rect>
+            <rect x="230" y="20" rx="20" ry="10" width="200" height="100"/>
+    </g>
+        <circle cx="350" cy="250" r="30"></circle>
+        <ellipse cx="200" cy="250" rx="100" ry="50"></ellipse>
+    </svg>
+</body>
+</html>

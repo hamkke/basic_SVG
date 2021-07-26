@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자쓰기</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .shapes {
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:#ddd;
+        }
+        .txt1 {
+            font-size:1.5rem;
+            font-weight:bold;
+            /*원래 글자 색깔은 color 하지만 얘는 svg라서 fill사용*/
+            fill:#fff;
+        }
+        .txt2 {
+            fill:tomato;
+            font-size:1.5rem;
+            font-weight:bold;
+        }
+        path {
+            fill:transparent;
+            stroke:tomato;
+        }
+        tspan {
+            fill:teal;
+            font-size:2rem;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes" xmls="http://www.o3.org/2000/svg">
+        <text class="txt1" x="20" y="50">안녕</text>
+
+        <!--글자랑 곡선 합치기-->
+        <defs> <!--나중에 참조할 그래픽요소를 담아놓는 태그라 생각하면 됨-->
+            <path id="txt-curve" d="M 50 400 C 50 400, 300 500, 400 400 C 400 400, 600 170, 700 300"></path>
+        </defs>
+        <text class="txt2" x="20" y="100">
+            <textPath href="#txt-curve">
+            하하하하하하 <tspan>얘만 바꾸기</tspan> 하하하하하하 호호호호호호호호호호  후후후후후후 후후후후후후 하하하하하하 호호호호호호호호호호  후후후후후후
+        </textPath>
+        </text>
+    </svg>
+</body>
+</html>

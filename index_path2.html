@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>path그리기2</title>
+    <style>
+        .shapes {
+            width:600px;
+            height:400px;
+            background:#ddd;
+        }
+        path {
+            fill:transparent;
+            stroke:tomato;
+            stroke-width:50;
+            /* stroke-linecap:butt;  얘가 기본*/
+            stroke-linecap:round; /*butt이 기본*/
+            /* stroke-linecap:square;  */
+
+            /* stroke-linejoin:miter; 얘가 기본 */
+            /* stroke-linejoin:round; */
+            stroke-linejoin:bevel;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes" xmls="http://www.o3.org/2000/svg"> <!--xmls써주는게 정석, 안 써도 되긴 함-->
+        <path d="M 50 200 L 300 100 L 400 200"></path>
+    </svg>
+</body>
+</html>

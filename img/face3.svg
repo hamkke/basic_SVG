@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 571 625.5">
+<defs>
+	<linearGradient id="hair-color">
+	<!--주의! sopt태그 마지막에 슬래시 해주기 안하면 오류남-->
+		<stop offset="0%" stop-color="#fff"/>
+		<stop offset="65%" stop-color="yellow"/>
+		<stop offset="100%" stop-color="red"/>
+	</linearGradient>
+	<!--redialGradient는 원형그라데이션-->
+	<style>
+		<![CDATA[
+		.hair {
+			fill:url('#hair-color');
+		}
+		]]>
+	</style>
+</defs>
+<circle cx="286.5" cy="354.5" r="251" fill="none" stroke="#000" stroke-width="40" stroke-miterlimit="10"/>
+<circle cx="175" cy="380.5" r="42.5"/>
+<circle cx="397" cy="380.5" r="42.5"/>
+<path d="M422 476.2c-34.4 38.6-83.7 60.6-135.5 60.6h-.5c-51.7.1-101-22-135.5-60.6" fill="none" stroke="#000" stroke-width="30" stroke-miterlimit="10"/>
+<path class="hair" d="M428.5 75c-12.3 0-24.3 1.4-35.7 3.9C376.9 33.6 317 0 245.5 0 162.6 0 95.2 45.3 94 101.5c-55.7 19.8-94 61.2-94 109C0 277.6 75.4 332 168.5 332c62 0 116.1-24.1 145.4-60.1 26 30.4 67.6 50.1 114.6 50.1 78.7 0 142.5-55.3 142.5-123.5S507.2 75 428.5 75z"/></svg>

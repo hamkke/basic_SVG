@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>path그리기</title>
+    <style>
+        .shapes {
+            width:600px;
+            height:400px;
+            background:#ddd;
+        }
+        path {
+            fill:transparent;
+            stroke:tomato;
+            stroke-width:5;
+        }
+    </style>
+</head>
+<body>
+    <svg class="shapes" xmls="http://www.o3.org/2000/svg"> <!--xmls써주는게 정석, 안 써도 되긴 함-->
+        <path d="M 300 200 L 330 220 H 50 V 300 Z"></path>
+        <path d="M 100 150 C 100 150, 300 50, 500 250"></path> <!--직선도 되지만 곡선도 가능하다는 점~~-->
+    </svg>
+</body>
+</html>
