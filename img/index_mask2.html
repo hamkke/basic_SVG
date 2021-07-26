@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마스크2_JS 추가하기</title>
+    <style>
+        .the-svg {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <svg class="the-svg">
+        <defs>
+            <pattern id="pattern-bg" x='0' y='0' width='0.2' height='0.1'>
+                <path d="M33 9A32 32 0 111 41 32 32 0 0133 9m0-1a33 33 0 1033 33A33 33 0 0033 8z"/>
+                <circle cx="17" cy="37" r="5"/>
+                <circle class="left-eye" cx="40" cy="38" r="7"/>
+                <path d="M44 55.5a10.75 10.75 0 01-21.5 0" fill="none" stroke="#000" stroke-miterlimit="10"/>
+                <ellipse cx="16" cy="14.5" rx="16" ry="6.5"/>
+                <ellipse cx="35" cy="8.5" rx="12" ry="8.5"/>
+                <ellipse cx="47.5" cy="18.5" rx="13.5" ry="10.5"/>
+            </pattern>
+
+            <mask id="mask-glass">
+                <circle class="circle" cx="80.51" cy="80.51" r="60" fill="#fff"/>
+            </mask>
+
+            <style>
+                @keyframes eye-ani {
+                    to {transform:scaleY(0.2);}
+                }
+                .left-eye {
+                    transform-origin:40px 38px;
+                    animation:eye-ani 0.5s infinite alternate;
+                }
+                .bg {
+                    fill:url(#pattern-bg);
+                }
+            </style>
+
+            <script>
+                window.addEventListener('DOMContentLoaded', () => {
+                    const magnifierElem = document.querySelector('.magnifier');
+                    const maskElem = document.querySelector('.circle');
+
+                    window.addEventListener('mousemove', (e) => {
+
+                        magnifierElem.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                        maskElem.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+                    });
+                });
+
+            </script>
+        </defs>
+
+        <path class='magnifier' d="M150.81 41.26a80.5 80.5 0 1 0-41.94 114.6l36.28 64.95a12 12 0 1 0 20.95-11.7l-36.29-64.95a80.51 80.51 0 0 0 21-102.9zm-41 91.63a60 60 0 1 1 23.12-81.64 60 60 0 0 1-23.12 81.64z" fill="#ce0000"/>
+
+        <g mask='url(#mask-glass)'>
+            <rect class="bg" x="0" y="0" width="100%" height='100%'></rect>
+        </g>
+    </svg>
+</body>
+</html>

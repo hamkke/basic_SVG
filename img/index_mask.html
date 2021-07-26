@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마스크1_기본적인 사용법</title>
+    <style>
+        .the-svg {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:#ddd;
+        }
+        .the-svg text {
+            font-size:2rem;
+        }
+    </style>
+</head>
+<body>
+    <svg class="the-svg">
+        <defs>
+            <mask id="mask">
+                <!--포토샵 마스크기능이랑 똑같음, 마스크 영역은 흰색이여야 보인다!-->
+                <circle cx="200" cy="50" r="50" fill="#fff"></circle>
+                <!-- <circle cx="200" cy="50" r="40" fill="000"></circle> -->
+                <!-- <circle cx="200" cy="50" r="40" fill="gray"></circle> -->
+            </mask>
+        </defs>
+        
+        <g mask="url(#mask)">
+            <text x="10" y="80">HELLO MY NAME IS INGING</text>
+        </g>
+    </svg>
+</body>
+</html>

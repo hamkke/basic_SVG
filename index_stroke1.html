@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stroke 애니메이션</title>
+    <style>
+        circle {
+            stroke: #000;
+            stroke-width:5;
+            stroke-dasharray:628;
+            stroke-dashoffset:0;
+            fill:transparent;
+            animation: dash-ani 1s;
+        }
+        @keyframes dash-ani {
+            from {stroke-dashoffset:628;}
+            to {stroke-dashoffset:0;}
+        }
+        path {
+            fill:transparent;
+            stroke:#000;
+            stroke-width:10;
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 800 500">
+        <circle cx='400' cy='250' r='100'></circle>
+
+        <path d="M6.5,58.5s-5-22,8-27,14,11,19,17,23,5,27,0,1-13,8-15,13,7,13,7">
+    </svg>
+
+    <script>
+        console.log(document.querySelector('circle').getTotalLength());
+    </script>
+</body>
+</html>
