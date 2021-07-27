@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform</title>
+    <style>
+        .box-container {
+            display:flex;
+
+        }
+        .box {
+            margin-left:2em;
+            width:100px;
+            height:100px;
+            border:2px solid #000;
+            background:rgba(193, 228, 36, 0.493);
+            transition:0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) 2s; /*2s = delay*/
+        }
+        /* .box:hover { */
+            /*hover시 직접width와height를 지정해서 크기를 키우는거랑 scale로 키우는거랑 다르게 움직인다*/
+            /* width:200px;
+            height:200px; */
+            /* 기본이1, 2는 두배라는 말  */
+            /* transform:scale(2) rotate(45deg);  속성을 한꺼번에 작성 가능*/
+            /* transform:skewX(10deg); */
+            /* transform:translate(30px, 5px); */
+            /* transform:scale(1.1);
+            transform-origin:left top; */
+            /* transform-origin:0% 0%; 퍼센트도 가능 */
+        /* } */
+        .box:hover {
+            transform:scale(1.1);
+        }
+        .box.box_other {transition:2s;}
+        .box.box_other:hover {
+            width:200px;
+            background:rgb(78, 78, 216);
+            font-size:3rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>css transform</h1>
+
+    <p>
+        ed animi illo rerum id officiis fuga placeat necessitatibus, earum reprehenderit culpa nam iure. Veniam ullam, at repudiandae asperiores modi nihil.
+        Numquam explicabo molestias consequatur laborum et veniam sunt eum voluptas, ipsum quam ipsa iste repellat rerum enim quisquam temporibus officiis? Culpa consectetur omnis error provident quibusdam ipsa beatae quaerat cumque.
+        Labore praesentium debitis ducimus enim laborum deserunt, incidunt quis modi. Id laboriosam non ut totam harum possimus recusandae nemo error mollitia officia voluptate optio velit quod sed alias, consectetur iure!
+        Perferendis, odit incidunt cupiditate ex accusamus beatae enim est aut laboriosam distinctio? Similique eaque labore nostrum perspiciatis ut placeat dolorem totam iure pariatur! Fugiat ut repellendus vero! Ea, adipisci molestias?
+        Iure distinctio libeuga, necessitatibus, earum voluptatibus iure magnam nam, repudiandae incidunt reiciendis saepe aliquam soluta quam. Ratione assumenda sunt aspernatur ad voluptatibus.
+       laudantium, labore officiis! Repellendus quibusdam odio dolor a, quidem similique debitis ea aliquam nostrum modi autem rerum dolores et eveniet! Et, nam voluptate.
+        Nemo incidunt at nam alias necessitatibus blanditiis quaerat, provident nostrum quod asperiores inventore placeat obcaecati culpa earum, molestiae nulla nobis! Impedit quaerat quo ad illo reiciendis blanditiis expedita officia quas.
+    </p>
+
+    <div class="box-container">
+        <div class="box">a</div>
+        <div class="box">b</div>
+        <div class="box">c</div>
+        <div class="box">d</div>
+        <div class="box">e</div>
+        <div class="box box_other">other</div>
+    </div>
+
+    <p>
+        ed animi illo rerum id officiis fuga placeat necessitatibus, earum reprehenderit culpa nam iure. Veniam ullam, at repudiandae asperiores modi nihil.
+        Numquam explicabo molestias consequatur laborum et veniam sunt eum voluptas, ipsum quam ipsa iste repellat rerum enim quisquam temporibus officiis? Culpa consectetur omnis error provident quibusdam ipsa beatae quaerat cumque.
+        Labore praesentium debitis ducimus enim laborum deserunt, incidunt quis modi. Id laboriosam non ut totam harum possimus recusandae nemo error mollitia officia voluptate optio velit quod sed alias, consectetur iure!
+        Perferendis, odit incidunt cupiditate ex accusamus beatae enim est aut laboriosam distinctio? Similique eaque labore nostrum perspiciatis ut placeat dolorem totam iure pariatur! Fugiat ut repellendus vero! Ea, adipisci molestias?
+        Iure distinctio libeuga, necessitatibus, earum voluptatibus iure magnam nam, repudiandae incidunt reiciendis saepe aliquam soluta quam. Ratione assumenda sunt aspernatur ad voluptatibus.
+       laudantium, labore officiis! Repellendus quibusdam odio dolor a, quidem similique debitis ea aliquam nostrum modi autem rerum dolores et eveniet! Et, nam voluptate.
+        Nemo incidunt at nam alias necessitatibus blanditiis quaerat, provident nostrum quod asperiores inventore placeat obcaecati culpa earum, molestiae nulla nobis! Impedit quaerat quo ad illo reiciendis blanditiis expedita officia quas.
+    </p>
+</body>
+</html>

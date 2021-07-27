@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIL애니메이션</title>
+    <style>
+        body {
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <!--Synchronized Multimedia Integration Language = SMIL,
+        css애니메이션이 할 수 없는 동작이 있어서 사용되고 있다-->
+        <svg class="svg" viewBox="0 0 1000 1000">
+            <defs>
+                <script>
+                    window.addEventListener('DOMContentLoaded', () => {
+                        const rectElem = document.querySelector('.rect');
+                        const aniElem = document.querySelector('.ani');
+
+                        rectElem.addEventListener('click', () => {
+                            aniElem.beginElement();
+                        });
+                    });
+                </script>
+            </defs>
+            <rect class='rect' x='10' y='10' width='20%' height='20%' fill='yellowgreen'>
+                <!--
+                    attributeName='x' = x라는 애를 애니메이션 주겠다
+                    dur='1s' = duration, 몇 초 동안
+                    to = '700' = 어디로
+                    repeatCount = '1' = 몇 번 반복, indefinite는 무한반복
+                    fill='freeze' = 끝나는 시점에서 처음으로 돌아가지말고 멈춰라
+                    begin='1's = 몇 초 후 시작 할꺼냐, begin='indefinite는 무한반복인데
+                    JS를 통해 클릭이벤트를 주면 무한반복이 가능 하다
+                -->
+                <animate class="ani" attributeName='x' dur='1s' to='700' repeatCount='1' fill='freeze' begin='indefinite'>
+                </animate>
+            </rect>
+        </svg>
+
+        <!--SMIL애니메이션에서 css alternate효과 적용하기-->
+        <svg class="svg" viewBox="0 0 1000 1000">
+            <rect x='10' y='10' width='20%' height='20%'>
+                <animate class="ani" attributeName='x' dur='2s' values='0; 700; 0' keyTimes='0; 0.5; 1' repeatCount='indefinite' fill='freeze'>
+                    <!--animation-direction: alternate; = values='0; 700;0' + keyTimes='0; 0.5; 1'-->
+                </animate>
+            </rect>
+        </svg>
+
+        <!--morphing 효과 만들기-->
+        <svg width="1662" height="1441" viewBox="0 0 5000 5000" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M817.874 373.697C950.274 174.097 649.708 226.197 482.874 277.197C426.874 292.924 441.874 334.697 376.874 373.697C311.874 412.698 290.874 174.697 182.874 36.6974C74.8743 -101.303 45.3743 185.697 78.8743 306.697C112.374 427.697 75.3743 535.697 9.87433 701.697C-55.6257 867.697 220.374 1258.2 376.874 1157.7C533.374 1057.2 1026.37 1142.7 1052.37 1362.7C1078.37 1582.7 1428.87 1269.2 1558.87 1258.2C1688.87 1247.2 1665.37 844.697 1646.37 701.697C1627.37 558.697 1486.37 528.197 1162.37 701.697C838.374 875.197 652.374 623.197 817.874 373.697Z" fill="#86FD28" fill-opacity="0.7">
+                <animate attributeName="d" dur='3s' to='M814.874 373.697C763.136 227.576 818.85 -97.2281 479.874 277.197C423.874 292.923 438.874 334.697 373.874 373.697C308.874 412.697 287.874 174.697 179.874 36.6969C71.8744 -101.303 42.3743 185.697 75.8743 306.697C109.374 427.697 72.3743 535.697 6.87432 701.697C-58.6257 867.697 421.222 977.834 373.874 1157.7C285.659 1492.8 780.209 1129.89 1049.37 1362.7C1503.56 1755.53 1232.58 1209.51 1555.87 1258.2C1879.17 1306.88 2630.2 702.634 1643.37 701.697C1499.12 701.56 1058.41 1055.09 1159.37 701.697C1232.55 445.558 881.897 562.983 814.874 373.697Z'></animate>
+            </path>
+        </svg>
+            
+</body>
+</html>
+    
+    
