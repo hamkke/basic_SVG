@@ -1,0 +1,26 @@
+    for(let i =0; i < todoCards.length; i++){
+            todoCards[i].addEventListener("click", function(e) {
+                let target = e.target
+                let par = target.parentNode;
+                par.style.backgroundColor = "yellow"
+            })
+        }
+
+
+
+const animals = ["강아지", "고양이", "햄스터", "강아지", "고양이", "고양이", "토끼"];
+let num = 0;
+let qqq = animals.map((a,b) => {
+    return a === "고양이"? num++ : num;
+})
+console.log(num)
+
+
+const animals = ["복슬 강아지", "검정 고양이", "노란 햄스터", "강아지", "노랑 고양이", "고양이", "흰 토끼"];
+
+let arr1 = [];
+
+let a = animals.filter(a => {
+    return a.indexOf("고양이") !== -1;
+})
+console.log(a)
